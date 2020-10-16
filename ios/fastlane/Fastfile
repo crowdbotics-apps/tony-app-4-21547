@@ -69,10 +69,10 @@ platform :ios do
       export_method: "app-store",
       xcargs: settings_to_override
     )
-    upload_to_testflight(
-      email: "tony@crowdbotics.com",
-      beta_app_description: "Beta version of #{app_name} uploaded by Crowdbotics"
-    )
+    #upload_to_testflight(
+    #  email: "tony@crowdbotics.com",
+    #  beta_app_description: "Beta version of #{app_name} uploaded by Crowdbotics"
+    #)
   end
 
   desc "Deployment to Appetize"

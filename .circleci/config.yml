@@ -138,13 +138,6 @@ jobs:
       - checkout
 
       - run:
-          name: Check if app has a paid plan
-          command: |
-            if [ "$HAS_PAID_PLAN" != 1 ]; then
-              exit 1
-            fi
-
-      - run:
           name: set Ruby version
           command: echo "ruby-2.5" > ~/.ruby-version
 
@@ -221,7 +214,7 @@ jobs:
 
       - run:
           name: Build and upload to appetize.io
-          command: bundle exec fastlane deploy_appetize
+          command: bundle exec fastlane beta
           working_directory: ios
 
       - store_artifacts:
